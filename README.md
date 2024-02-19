@@ -1,5 +1,5 @@
 <centre>
-<img src="https://github.com/FouadEAF/elazbi/blob/main/static/images/EAFLogo.jpg" alt="EAFLogo"  height="100px">
+<img src="https://github.com/FouadEAF/elazbi/blob/main/images/EAFLogo.jpg" alt="EAFLogo"  height="100px">
 </centre>
 # Project Portfolio
 
