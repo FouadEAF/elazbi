@@ -27,49 +27,54 @@
 
       /* Desktop View */
       @media (min-width: 768px) {
-        .table-view {
-          display: block;
-        }
-        .card-view {
-          display: none;
-        }
-        .table-responsive { 
+        .table-view { display: block; }
+        .card-view { display: none; }
+
+        .table-responsive {
           margin: 2rem auto;
           max-width: 90%;
           box-shadow: 0 0 20px rgba(0,0,0,0.1);
           border-radius: 10px;
           overflow: hidden;
         }
-        table.academic { 
-          width: 100%; 
-          border-collapse: collapse; 
+
+        table.academic {
+          width: 100%;
+          border-collapse: collapse;
           background: #fff;
           margin: 0 auto;
         }
-        table.academic thead th { 
-          background: #000000; 
-          color: #fff; 
-          padding: 15px; 
-          position: sticky; 
-          top: 0; 
+
+        table.academic thead th {
+          background: #000000;
+          color: #fff;
+          padding: 15px;
+          position: sticky;
+          top: 0;
           z-index: 2;
           text-align: center;
         }
-        table.academic thead th:first-child { 
+
+        table.academic thead th:first-child {
           width: 120px;
           min-width: 120px;
           white-space: nowrap;
         }
-        table.academic tbody td { 
-          border-bottom: 1px solid #eee; 
-          padding: 12px; 
-          vertical-align: top;
+
+        /* Vertically center table cell content so rows with wrapped cells align nicely */
+        table.academic tbody td {
+          border-bottom: 1px solid #eee;
+          padding: 12px;
+          vertical-align: middle;
           text-align: center;
+          word-break: break-word;
         }
+
         table.academic tbody td:first-child {
           white-space: nowrap;
           font-family: monospace;
         }
+
         table.academic tbody tr:hover {
           background-color: rgba(0, 0, 0, 0.05);
         }
@@ -77,13 +82,9 @@
 
       /* Mobile View */
       @media (max-width: 767px) {
-        .table-view {
-          display: none;
-        }
-        .card-view {
-          display: block;
-          padding: 15px;
-        }
+        .table-view { display: none; }
+        .card-view { display: block; padding: 15px; }
+
         .academic-card {
           background: #fff;
           border-radius: 10px;
@@ -91,87 +92,19 @@
           margin-bottom: 15px;
           padding: 15px;
         }
+
         .academic-card .date {
           color: #000000;
           font-family: monospace;
           font-weight: bold;
           margin-bottom: 10px;
         }
-        .academic-card .title {
-          font-size: 1.1em;
-          margin-bottom: 10px;
-          color: #000000;
-        }
-        .academic-card .label {
-          color: #666;
-          font-size: 0.9em;
-          margin-bottom: 5px;
-        }
-        .academic-card .source {
-          color: #888;
-          font-size: 0.85em;
-          font-style: italic;
-        }
-      }
-      
-      .section { padding: 60px 0; }
-      .breadcrumbs a { color: #fff; text-decoration: underline; }
+
+        .academic-card .title { font-size: 1.1em; margin-bottom: 10px; color: #000000; }
+        .academic-card .label { color: #666; font-size: 0.9em; margin-bottom: 5px; }
+        .academic-card .source { color: #888; font-size: 0.85em; font-style: italic; }
       }
 
-      /* Mobile View */
-      @media (max-width: 767px) {
-        .table-view {
-          display: none;
-        }
-        .card-view {
-          display: block;
-          padding: 15px;
-        }
-        .academic-card {
-          background: #fff;
-          border-radius: 10px;
-          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-          margin-bottom: 15px;
-          padding: 15px;
-        }
-        .academic-card .date {
-          color: #000000;
-          font-family: monospace;
-          font-weight: bold;
-          margin-bottom: 10px;
-        }
-        .academic-card .title {
-          font-size: 1.1em;
-          margin-bottom: 10px;
-          color: #000000;
-        }
-        .academic-card .label {
-          color: #666;
-          font-size: 0.9em;
-          margin-bottom: 5px;
-        }
-        .academic-card .source {
-          color: #888;
-          font-size: 0.85em;
-          font-style: italic;
-        }
-      }
-        min-width: 120px;
-        white-space: nowrap;
-      }
-      table.academic tbody td { 
-        border-bottom: 1px solid #eee; 
-        padding: 12px; 
-        vertical-align: top;
-        text-align: center;
-      }
-      table.academic tbody td:first-child {
-        white-space: nowrap;
-        font-family: monospace;
-      }
-      table.academic tbody tr:hover {
-        background-color: rgba(13, 110, 253, 0.05);
-      }
       .section { padding: 60px 0; }
       .breadcrumbs a { color: #fff; text-decoration: underline; }
     </style>
@@ -201,16 +134,16 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>2003-02-09</td><td>استعراض</td><td>شهادة المشاركة</td><td>جمعية نادي أوسرد للكراطي</td></tr>
+                  <tr><td>2003-02-09</td><td>استعراض رياضي</td><td>شهادة المشاركة</td><td>جمعية نادي أوسرد للكراطي</td></tr>
                   <tr><td>2003-06-01</td><td>امتحان الدرجة</td><td>شهادة الدرجة</td><td>جمعية نادي أوسرد للكراطي</td></tr>
-                  <tr><td>2004-01-01</td><td>كرة القدم</td><td>شهادة تقديرية</td><td>منظمة الكشاف الشعبي فرع الداخلة</td></tr>
-                  <tr><td>2004-01-02</td><td>كرة القدم</td><td>شهادة تقديرية</td><td>منظمة الكشاف الشعبي فرع الداخلة</td></tr>
-                  <tr><td>2004-01-03</td><td>كرة القدم</td><td>شهادة تقديرية</td><td>منظمة الكشاف الشعبي فرع الداخلة</td></tr>
+                  <tr><td>2004-01-01</td><td>بطولة كرة القدم</td><td>شهادة تقديرية</td><td>منظمة الكشاف الشعبي فرع الداخلة</td></tr>
+                  <tr><td>2004-01-02</td><td>بطولة كرة القدم</td><td>شهادة تقديرية</td><td>منظمة الكشاف الشعبي فرع الداخلة</td></tr>
+                  <tr><td>2004-01-03</td><td>بطولة كرة القدم</td><td>شهادة تقديرية</td><td>منظمة الكشاف الشعبي فرع الداخلة</td></tr>
                   <tr><td>2009-06-13</td><td>التدريب في الإعلاميات المكتبية</td><td>شهادة التدريب</td><td>الأكاديمية الجهوية للتربية والتكوين بالداخلة</td></tr>
                   <tr><td>2009-06-17</td><td>علوم الرياضية تخصص ب</td><td>شهادة البكالوريا</td><td>الأكاديمية الجهوية للتربية والتكوين بالداخلة</td></tr>
                   <tr><td>2009-09-10</td><td>الإعلاميات المكتبية</td><td>شهادة التخرج</td><td>التعاون الوطني (دار المواطن)</td></tr>
                   <tr><td>2012-07-19</td><td>علوم الفزيائية</td><td>شهادة البكالوريا</td><td>الأكاديمية الجهوية للتربية والتكوين بالداخلة</td></tr>
-                  <tr><td>2014-07-17</td><td>الكفاءة المهنية</td><td>شهادة التخرج</td><td>الدرك الملكي</td></tr>
+                  <tr><td>2014-07-17</td><td>الكفاءة المهنية</td><td>شهادة التخرج</td><td>إدارة الدفاع</td></tr>
                   <tr><td>2017-04-12</td><td>Java</td><td>Certificate of completion</td><td>Sololearn</td></tr>
                   <tr><td>2018-04-04</td><td>HTML</td><td>Certificate of completion</td><td>Sololearn</td></tr>
                   <tr><td>2018-04-20</td><td>SQL</td><td>Certificate of completion</td><td>Sololearn</td></tr>
@@ -221,7 +154,7 @@
                   <tr><td>2019-09-06</td><td>CSS</td><td>Certificate of completion</td><td>Sololearn</td></tr>
                   <tr><td>2020-01-18</td><td>دورة التكوينية في مجال بيداغوجيا التدريس ديداكتيك المواد</td><td>شهادة التكوين</td><td>مدرسة التجارة والتدبير الإداري</td></tr>
                   <tr><td>2020-01-24</td><td>Python programming basics</td><td>Certificate of completion</td><td>Mahara-Tech mooca</td></tr>
-                  <tr><td>2020-02-07</td><td>Analyse en recherches criminelles</td><td>Brevet elementaire</td><td>Gendarmerie royale</td></tr>
+                  <tr><td>2020-02-07</td><td>Analyse en recherches criminelles</td><td>Brevet elementaire</td><td>Administration de la défense</td></tr>
                   <tr><td>2020-06-05</td><td>Python 3</td><td>Certificate of completion</td><td>Sololearn</td></tr>
                   <tr><td>2020-06-17</td><td>الجداول الإلكترونية</td><td>شهادة إتمام مساق</td><td>Specto ICT skills - إدراك</td></tr>
                   <tr><td>2020-06-19</td><td>معالجة النصوص</td><td>شهادة إتمام مساق</td><td>Specto ICT skills - إدراك</td></tr>
@@ -260,11 +193,11 @@
                   <tr><td>2023-02-05</td><td>Aikido</td><td>Certificate de Stage Regionnal</td><td>Federation royale Marocaine d'Aikido, Kendo, Iaido et Judo</td></tr>
                   <tr><td>2023-03-05</td><td>Aikido</td><td>Certificate de Stage International</td><td>Federation royale Marocaine d'Aikido, Kendo, Iaido et Judo</td></tr>
                   <tr><td>2023-03-12</td><td>Aikido</td><td>Certificate de Stage Regionnal</td><td>Federation royale Marocaine d'Aikido, Kendo, Iaido et Judo</td></tr>
-                  <tr><td>2023-03-28</td><td>Analyse en recherches criminelles</td><td>Brevet Superieur</td><td>Gendarmerie royale</td></tr>
+                  <tr><td>2023-03-28</td><td>Analyse en recherches criminelles</td><td>Brevet Superieur</td><td>Administration de la défense</td></tr>
                   <tr><td>2023-05-07</td><td>Aikido</td><td>Certificate de Stage Regionnal</td><td>Federation royale Marocaine d'Aikido, Kendo, Iaido et Judo</td></tr>
                   <tr><td>2023-11-19</td><td>Aikido</td><td>Certificate de Stage Regionnal</td><td>Federation royale Marocaine d'Aikido, Kendo, Iaido et Judo</td></tr>
                   <tr><td>2023-12-03</td><td>Aikido</td><td>Certificate de Stage International</td><td>Federation royale Marocaine d'Aikido, Kendo, Iaido et Judo</td></tr>
-                  <tr><td>2023-12-06</td><td>تهنئة على الكفاءة المهنية</td><td>تهنئة</td><td>الدرك الملكي</td></tr>
+                  <tr><td>2023-12-06</td><td>تهنئة على الكفاءة المهنية</td><td>تهنئة</td><td>إدارة الدفاع</td></tr>
                   <tr><td>2024-01-01</td><td>Operating Systems basics</td><td>Certificate of completion</td><td>CISCO Networking Academy</td></tr>
                   <tr><td>2024-01-07</td><td>Aikido</td><td>Certificate de Stage National</td><td>Federation royale Marocaine d'Aikido, Kendo, Iaido et Judo</td></tr>
                   <tr><td>2024-01-07</td><td>Computer Hardware Basics</td><td>Certificate of completion</td><td>CISCO Networking Academy</td></tr>
