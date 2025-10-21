@@ -328,6 +328,11 @@ h5,
       padding-bottom: 1rem;
       font-size: 24px;
     }
+    // When the mobile menu is open, prevent the scrolled state from
+    // shifting the navbar out of view. This keeps the toggler visible.
+    &.menu-open {
+      margin-top: 0 !important;
+    }
   }
 }
 
@@ -1379,6 +1384,21 @@ textarea.form-control {
     font-weight: 900;
     &.big-2 {
       right: 0;
+    }
+  }
+
+  // Center big heading only for About section to avoid affecting other sections
+  #about-section {
+    .heading-section {
+      h1.big {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      h1.big.big-2 {
+        right: 0;
+        left: auto;
+        transform: none;
+      }
     }
   }
   h2 {

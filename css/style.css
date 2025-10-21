@@ -12118,7 +12118,7 @@ h5,
 
 .ftco-navbar-light.scrolled .navbar-toggler {
   border: none;
-  color: rgba(0, 0, 0, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
   border-color: rgba(0, 0, 0, 0.5) !important;
   cursor: pointer;
   text-transform: uppercase;
@@ -12152,6 +12152,9 @@ h5,
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-size: 24px;
+}
+.ftco-navbar-light.scrolled.menu-open {
+  margin-top: 0 !important;
 }
 
 .navbar-brand {
@@ -13370,6 +13373,17 @@ textarea.form-control {
 
 .heading-section h1.big.big-2 {
   right: 0;
+}
+
+/* Center big heading only for About section to avoid affecting other sections */
+#about-section .heading-section h1.big {
+  left: 50%;
+  transform: translateX(-50%);
+}
+#about-section .heading-section h1.big.big-2 {
+  right: 0;
+  left: auto;
+  transform: none;
 }
 
 .heading-section h2 {
