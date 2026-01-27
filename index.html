@@ -25,7 +25,9 @@
 	<link rel="stylesheet" href="./css/flaticon.css">
 	<link rel="stylesheet" href="./css/icomoon.css">
 	<link rel="stylesheet" href="./css/style.css">
-</head>
+	<link rel="stylesheet" href="./css/resume-dropdown.css">
+
+	</head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
@@ -39,7 +41,14 @@
 				<ul class="navbar-nav nav ml-auto">
 					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
 					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+					<li class="nav-item dropdown">
+						<a href="#resume-section" class="nav-link dropdown-toggle" id="resumeDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Resume</span></a>
+						<div class="dropdown-menu" aria-labelledby="resumeDropdown">
+							<a href="pages/portfolio.html" class="dropdown-item">Background academic</a>
+							<a href="https://drive.google.com/file/d/1wKC3r-8Fy5pEB4C-EJgS9anj0aMFhnuq/view" target="_blank" class="dropdown-item">Download CV</a>
+						</div>
+					</li>
+
 					<li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li>
 					<li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
 					<!-- <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li> -->
@@ -407,34 +416,26 @@
 			</div>
 			<marquee style="background-color: whitesmoke; height: 50px;">
 			<p align="center" >
-				<!-- Git -->
-				<img src="images/tech/git.png" alt="Git" height="40" style="vertical-align:top; margin:4px">
-				<!-- Github -->
-				<img src="images/tech/github.png" alt="GitHub" height="40" style="vertical-align:top; margin:4px">
+				<!-- Microsoft -->
+				<img src="images/tech/Microsoft.png" alt="Microsoft" height="40" style="vertical-align:top; margin:4px">
+				<!-- MacOS -->
+				<img src="images/tech/mac-os.png" alt="Mac OS" height="40" style="vertical-align:top; margin:4px">
+				<!-- ubuntu -->
+				<img src="images/tech/ubuntu.png" alt="ubuntu" height="40" style="vertical-align:top; margin:4px">
+				<!-- Android -->
+				<img src="images/tech/android.png" alt="Android" height="40" style="vertical-align:top; margin:4px">
+				
 				<!-- Visual Studio Code -->
 				<img src="images/tech/vscode.png" alt="Visual Studio Code" height="40" style="vertical-align:top; margin:4px">
 				<!-- Cursor -->
 				<img src="images/tech/cursorai.svg" alt="Cursor ai" height="40" style="vertical-align:top; margin:4px">
+				<!-- Google Antigravity -->
+				<img src="images/tech/antigravity.png" alt="Google Antigravity" height="40" style="vertical-align:top; margin:4px">
 				<!-- Android Studio -->
 				<img src="images/tech/android-studio.png" alt="Android Studio" height="40" style="vertical-align:top; margin:4px">
-				<!-- i2 Analyst's Notebook  -->
-				<img src="images/tech/i2anb.jpeg" alt="i2 Analyst's Notebook" height="40" style="vertical-align:top; margin:4px" >
-				<!-- SQL -->
-				<img src="images/tech/mysql.webp" alt="mysql" height="50"/>
-				<!-- Firebase -->
-				<img src="images/tech/firebase.png" alt="Firebase" height="50"/>
-				<!-- Shell -->
-				<img src="images/tech/shell.png" alt="Shell" height="40" style="vertical-align:top; margin:4px">
-				<!-- ubuntu -->
-				<img src="images/tech/ubuntu.png" alt="ubuntu" height="40" style="vertical-align:top; margin:4px">
-				<!-- Python -->
-				<img src="images/tech/python.png" alt="Python" height="40" style="vertical-align:top; margin:4px">
-				<!-- Flask -->
-				<img src="images/tech/flask.png" alt="Flask" height="40" style="vertical-align:top; margin:4px">
-				<!-- Django -->
-				<img src="images/tech/django.png" alt="Django" height="40" style="vertical-align:top; margin:4px">
-				<!-- Docker -->
-				<img src="images/tech/docker.png" alt="Docker" height="40" style="vertical-align:top; margin:4px">
+				<!-- Emacs -->
+				<img src="images/tech/emacs.png" alt="Emacs" height="40" style="vertical-align:top; margin:4px">
+				
 				<!-- Objectif C -->
 				<img src="images/tech/c.png" alt="Objectif C" height="40" style="vertical-align:top; margin:4px">
 				<!-- HTML -->
@@ -447,20 +448,35 @@
 				<img src="images/tech/dart.png" alt="Dart" height="40" style="vertical-align:top; margin:4px">
 				<!-- Flutter -->
 				<img src="images/tech/flutter.png" alt="Flutter" height="40" style="vertical-align:top; margin:4px">
-				<!-- MS Office -->
-				<img src="images/tech/office.png" alt="MS Office" height="40" style="vertical-align:top; margin:4px">
-				<!-- Microsoft -->
-				<img src="images/tech/Microsoft.png" alt="Microsoft" height="40" style="vertical-align:top; margin:4px">
+				<!-- Python -->
+				<img src="images/tech/python.png" alt="Python" height="40" style="vertical-align:top; margin:4px">
+				<!-- Flask -->
+				<img src="images/tech/flask.png" alt="Flask" height="40" style="vertical-align:top; margin:4px">
+				<!-- Django -->
+				<img src="images/tech/django.png" alt="Django" height="40" style="vertical-align:top; margin:4px">
+
+				<!-- Git -->
+				<img src="images/tech/git.png" alt="Git" height="40" style="vertical-align:top; margin:4px">
+				<!-- Shell -->
+				<img src="images/tech/shell.png" alt="Shell" height="40" style="vertical-align:top; margin:4px">
+				<!-- Github -->
+				<img src="images/tech/github.png" alt="GitHub" height="40" style="vertical-align:top; margin:4px">
+				<!-- Docker -->
+				<img src="images/tech/docker.png" alt="Docker" height="40" style="vertical-align:top; margin:4px">
+				<!-- i2 Analyst's Notebook  -->
+				<img src="images/tech/i2anb.png" alt="i2 Analyst's Notebook" height="40" style="vertical-align:top; margin:4px" >
 				<!-- Power BI -->
 				<img src="images/tech/power-bi.png" alt="Power BI" height="40" style="vertical-align:top; margin:4px">
+				<!-- MS Office -->
+				<img src="images/tech/office.png" alt="MS Office" height="40" style="vertical-align:top; margin:4px">
+				<!-- Firebase -->
+				<img src="images/tech/firebase.png" alt="Firebase" height="50"/>
 				<!-- MongoDB -->
 				<img src="images/tech/mongodb.png" alt="MongoDB" height="40" style="vertical-align:top; margin:4px">
-				<!-- Android -->
-				<img src="images/tech/android.png" alt="Android" height="40" style="vertical-align:top; margin:4px">
-				<!-- MacOS -->
-				<img src="images/tech/mac-os.jpg" alt="Mac OS" height="40" style="vertical-align:top; margin:4px">
 				<!-- PostgeSQL -->
 				<img src="images/tech/postgresql.png" alt="PostgeSQL" height="40" style="vertical-align:top; margin:4px">
+				<!-- SQL -->
+				<img src="images/tech/mysql.webp" alt="mysql" height="50"/>
 			</p>
 			</marquee>
         </div>
@@ -608,6 +624,7 @@
 			</div>
 		</div>
 	</section>
+	
 	<!-- Contact Section -->
 	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
 		<div class="container">
