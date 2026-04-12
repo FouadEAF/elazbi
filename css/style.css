@@ -14062,3 +14062,44 @@ textarea.form-control {
     stroke-dashoffset: -136px;
   }
 }
+
+/* Google Play Notice Section */
+.gplay-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+.gplay-card:hover {
+    border-color: #007bff;
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-5px);
+}
+
+.gplay-badge {
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.gplay-badge:hover {
+    transform: scale(1.05);
+}
+
+.gplay-card h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.gplay-card p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    line-height: 1.6;
+}
