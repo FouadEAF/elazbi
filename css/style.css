@@ -18,7 +18,7 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #007bff;
+  --primary: #3e64ff;
   --secondary: #6c757d;
   --success: #28a745;
   --info: #17a2b8;
@@ -31,11 +31,11 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --accent-color: #3e64ff;
 }
 
 *,
@@ -46,7 +46,7 @@
 }
 
 html {
-  font-family: sans-serif;
+  font-family: var(--font-body);
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -67,15 +67,13 @@ section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
+  line-height: 1.8;
+  color: #999999;
   text-align: left;
-  background-color: #fff;
+  background-color: #000000;
 }
 
 [tabindex="-1"]:focus {
@@ -97,6 +95,8 @@ h5,
 h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
+  font-family: var(--font-heading);
+  color: #fff;
 }
 
 p {
@@ -11876,6 +11876,9 @@ h5,
 
 .ftco-navbar-light {
   background: transparent !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   position: absolute;
   top: 0;
   left: 0;
@@ -12060,7 +12063,10 @@ h5,
   left: 0;
   top: 0;
   margin-top: -130px;
-  background: #000000 !important;
+  background: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   padding: 0 15px;
@@ -12798,7 +12804,15 @@ h5,
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px;
+  transition: all 0.3s ease;
 }
+.resume-wrap:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 30px -10px rgba(255, 255, 255, 0.1);
+}
+
+
 
 .resume-wrap .date {
   font-weight: 900;
@@ -12820,11 +12834,22 @@ h5,
 .services-1 {
   margin-bottom: 40px;
   padding: 2em;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  transition: all 0.3s ease;
   width: 100%;
   -webkit-box-shadow: 0px 20px 69px -27px rgba(0, 0, 0, 0.17);
   -moz-box-shadow: 0px 20px 69px -27px rgba(0, 0, 0, 0.17);
   box-shadow: 0px 20px 69px -27px rgba(0, 0, 0, 0.17);
+}
+
+.services-1:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent-color);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .services-1 .icon {
@@ -13152,6 +13177,11 @@ textarea.form-control {
 .ftco-animate {
   opacity: 0;
   visibility: hidden;
+}
+
+.ftco-animated {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .bg-primary {
@@ -14102,4 +14132,44 @@ textarea.form-control {
     color: rgba(255, 255, 255, 0.7);
     font-size: 16px;
     line-height: 1.6;
+}
+
+/* Tools Grid Section */
+.tools-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.tool-item {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.tool-item img {
+    height: 30px;
+    width: auto;
+    object-fit: contain;
+}
+
+.tool-item span {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.tool-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    background: rgba(255, 255, 255, 0.05);
 }
